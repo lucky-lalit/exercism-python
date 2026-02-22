@@ -1,0 +1,32 @@
+def find(search_list, value):
+    left = 0
+    right = len(search_list) - 1
+    while left <= right:
+        mid = (left+right)//2
+
+        if search_list[mid] == value:
+            return mid
+
+        elif search_list[mid] > value:
+            right = mid - 1
+        else:
+            left = mid + 1
+    raise ValueError("value not in array")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    # if value in search_list:
+    #     return search_list.index(value)
+    # else:
+    #     raise ValueError("value not in array") 
